@@ -1,0 +1,169 @@
+<!--
+Copyright 2018, Chancellor Systems, All rights reserved
+-->
+
+<!--
+Image Credits
+Yellow Triangle: Clker-Free-Vector-Images, https://pixabay.com/en/warning-sign-30915/
+
+All images pertaining to the University are copyright University of Worcester
+-->
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Chancellor Systems</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/modal.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+
+  <body>
+
+    <div class="front_page">
+
+      <img class="background_image" src="images/bground.png"/>
+
+      <header id="header" class="dirty_fix fixed-header">
+        <img class="logo" src="images/logo.png"/>
+        <h1 class="head_text">Accident and Near-Miss Reporting</h1>
+        <button type="button" class="top_right_button btn btn-primary" data-toggle="modal" data-target=".contact">
+          Contact Administrator
+        </button>
+      </header>
+
+      <div id="modal_login" class="modal fade login" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div id="modal_login_content" class="modal-content">
+            <img class="modal_not_bs_logo" src="images/logo_no_text.png" alt="logo">
+            <span class="close_modal" title="Close" data-dismiss="modal">&times;</span><br>
+            <form method="post" action="php/login.php">
+              <div class="row">
+                <div class="col-sm-6 text-right">
+                  <label for="user"><strong>Username&nbsp;</strong></label>
+                </div>
+                <div class="col-sm-6">
+                  <input type="text" placeholder="Enter Username" name="user" required/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 text-right">
+                  <label for="pass"><strong>Password&nbsp;</strong></label>
+                </div>
+                <div class="col-sm-6">
+                  <input type="password" placeholder="Enter Password" name="pass" required/>
+                </div>
+                <br><br>
+                <input type="hidden" name="page" value="acc" id="one"></input>
+                <input type="hidden" name="page" value="con" id="two"></input>
+                <input type="hidden" name="page" value="nea" id="three"></input>
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-6 text-center">
+                      <button type="button" data-dismiss="modal">Cancel</button>
+                    </div>
+                    <div class="col-md-6 text-center">
+                      <button type="submit">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal_contact" class="modal fade contact" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div id="modal_contact_content" class="modal-content">
+            <img class="modal_not_bs_logo" src="images/logo_no_text.png" alt="logo">
+            <span class="close_modal" title="Close" data-dismiss="modal">&times;</span>
+            <form method="post" action="php/mail.php">
+              <div class="row">
+                <div class="col-sm-6  text-right">
+                  <label for="new_user"><strong>Enter email address&nbsp;</strong></label>
+                </div>
+                <div class="col-sm-6">
+                  <input type="text" placeholder="joebloggs@gmail.com" name="email" required/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1"></div><!-- left space -->
+                <div class="col-md-6">
+                  <label for="query"><strong>Enter query&nbsp;</strong></label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1"></div><!-- left space -->
+                <div class="col-md-10">
+                  <textarea type="textarea" class="querybox" placeholder="Type your query...." name="query"></textarea>
+                </div>
+                <div class="col-md-1"></div><!-- right space -->
+                <input type="hidden" value="../index.html" name="previous"></input>
+              </div>
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-6 text-center">
+                    <button type="button" data-dismiss="modal">Cancel</button>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <button id="email_submit" type="submit">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="col-md-6 text-right">
+              <p id="confirmation"></p>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div id="main_content">
+        <img class="warning" src="images/exclamation.png"/>
+        <p class="main_text">Please note that the law changed on 6 April 2012. If a worker sustains an occupational injury resulting from an accident,
+          their injury should be reported if they are incapacitated for more than seven days.
+          There is no longer a requirement to report occupational injuries that result in more than three days of incapacitation,
+          but you must still keep a record of such injuries.</p>
+
+          <div id="nav_butt">
+            <form action="#">
+              <button class="section_buttons" id="accident_butt" data-toggle="modal" data-target=".login">Record Accident</button><span>&nbsp;&nbsp;</span>
+              <button class="section_buttons" id="near_butt" data-toggle="modal" data-target=".login">Record Near Miss</button><span>&nbsp;&nbsp;</span>
+              <button class="section_buttons" id="concern_butt" data-toggle="modal" data-target=".login">Report Concern</button><span>&nbsp;&nbsp;</span>
+            </form>
+          </div>
+
+      </div>
+
+      <div id="info">
+        <p class="left">You legally must report an accident when it:</p>
+        <ul class="mid-left">
+          <li><p>results in an employee not being able to work for three days or more</p></li>
+          <li><p>is a reportable incident, injury, disease or dangerous occurrence (RIDDOR).</p></li>
+        </ul>
+        <a class="left" href="help/information.html">Information for employers, employees and students</a>
+      </div>
+
+      <footer id="foot_bar" class="dirty_fix fixed-footer">
+        <p id="foot">&copy; 2018 Chancellor Systems</p>
+        <div id="questions">
+          <a href="help/difference.html">What is the difference between recordable and reportable?</a></br>
+          <a href="help/reportable.html">What constitutes a reportable accident?</a></br>
+          <a href="help/nearmiss.html">What constitutes a near miss?</a></br>
+          <a href="help/dataprotection.html">How is my personal information used?</a>
+        </div>
+      </footer>
+
+    </div>
+
+  </body>
+
+</html>

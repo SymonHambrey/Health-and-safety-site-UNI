@@ -1,0 +1,6 @@
+[02-Apr-2018 07:14:38 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home/hdppdtxi/public_html/symon/Chancellor/php/login.php on line 43
+[02-Apr-2018 07:29:35 America/New_York] PHP Parse error:  syntax error, unexpected '}' in /home/hdppdtxi/public_html/symon/Chancellor/php/login.php on line 60
+[02-Apr-2018 07:31:54 America/New_York] PHP Parse error:  syntax error, unexpected '}' in /home/hdppdtxi/public_html/symon/Chancellor/php/login.php on line 61
+[02-Apr-2018 07:32:09 America/New_York] PHP Parse error:  syntax error, unexpected '}' in /home/hdppdtxi/public_html/symon/Chancellor/php/login.php on line 61
+[02-Apr-2018 07:32:47 America/New_York] PHP Parse error:  syntax error, unexpected '}' in /home/hdppdtxi/public_html/symon/Chancellor/php/login.php on line 61
+[02-Apr-2018 07:35:47 America/New_York] PHP Fatal error:  Call to a member function prepare() on null in /home/hdppdtxi/public_html/symon/Chancellor/php/login.php on line 47

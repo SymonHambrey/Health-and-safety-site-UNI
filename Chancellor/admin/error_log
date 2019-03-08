@@ -1,0 +1,9 @@
+[02-Apr-2018 11:03:30 America/New_York] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/hdppdtxi/public_html/symon/Chancellor/admin/list_and_delete.php on line 12
+[02-Apr-2018 11:03:49 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'USER' in 'field list'' in /home/hdppdtxi/public_html/symon/Chancellor/admin/list_and_delete.php:8
+Stack trace:
+#0 /home/hdppdtxi/public_html/symon/Chancellor/admin/list_and_delete.php(8): PDOStatement->execute()
+#1 /home/hdppdtxi/public_html/symon/Chancellor/admin/admin_page.php(114): include('/home/hdppdtxi/...')
+#2 {main}
+  thrown in /home/hdppdtxi/public_html/symon/Chancellor/admin/list_and_delete.php on line 8
+[02-Apr-2018 11:12:03 America/New_York] PHP Parse error:  syntax error, unexpected 'while' (T_WHILE) in /home/hdppdtxi/public_html/symon/Chancellor/admin/list_and_delete.php on line 24
+[02-Apr-2018 12:35:45 America/New_York] PHP Fatal error:  Call to a member function prepare() on null in /home/hdppdtxi/public_html/symon/Chancellor/admin/delete_confirm.php on line 11
